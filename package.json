@@ -4,6 +4,10 @@
     "description": "My personal blog built with Hugo",
     "scripts": {
         "dev": "hugo server -D",
-        "build": "hugo --gc --minify"
+        "build": "hugo --gc --minify",
+        "vercel-build": "hugo --gc --minify"
+    },
+    "dependencies": {
+        "hugo-extended": "0.123.6"
     }
 } 

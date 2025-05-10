@@ -1,14 +1,13 @@
 {
-    "buildCommand": "hugo --gc --minify",
-    "installCommand": "hugo-installer",
     "framework": "hugo",
+    "buildCommand": "hugo --gc --minify",
+    "devCommand": "hugo server -D",
+    "outputDirectory": "public",
+    "installCommand": "curl -L https://github.com/gohugoio/hugo/releases/download/v0.123.6/hugo_extended_0.123.6_darwin-universal.tar.gz | tar -xz && mv hugo /usr/local/bin/",
     "builds": [
         {
-            "src": "package.json",
-            "use": "@vercel/static-build",
-            "config": {
-                "zeroConfig": true
-            }
+            "src": "**",
+            "use": "@vercel/static"
         }
     ]
 } 
