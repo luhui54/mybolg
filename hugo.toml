@@ -1,16 +1,17 @@
 baseURL = "/"
 languageCode = "zh-cn"
-title = "My Blog"
+title = "我的博客"
 theme = "blowfish"
+defaultContentLanguage = "zh-cn"
 
 # 主题配置
 [params]
   # 网站描述
-  description = "我的个人博客"
+  description = "分享技术，记录生活"
   
   # 配置主题外观
   colorScheme = "blowfish"
-  defaultAppearance = "dark"
+  defaultAppearance = "light"
   autoSwitchAppearance = true
   enableSearch = true
   
@@ -38,50 +39,59 @@ theme = "blowfish"
     showTaxonomies = true
     showWordCount = true
     showSummary = true
-    sharingLinks = ["linkedin", "twitter", "whatsapp", "facebook", "email"]
+    sharingLinks = ["twitter", "github", "email"]
 
   # 作者信息
   [params.author]
-    name = "Your Name"
-    headline = "A passionate blogger"
-    bio = "这里写一些关于你自己的介绍"
+    name = "博主"
+    headline = "热爱技术，热爱生活"
+    bio = "一个对技术充满热情的程序员"
+    image = "img/author.jpg"  # 可以添加你的头像
 
   # 社交媒体链接
-  [[params.author.links]]
-    github = "https://github.com/yourusername"
-  
-  [[params.author.links]]
-    twitter = "https://twitter.com/yourusername"
+  [[params.socialLinks]]
+    icon = "github"
+    title = "GitHub"
+    url = "https://github.com/yourusername"
 
-  # 外观定制
+  [[params.socialLinks]]
+    icon = "twitter"
+    title = "Twitter"
+    url = "https://twitter.com/yourusername"
+
+  # 页脚配置
   [params.footer]
     showCopyright = true
     showThemeAttribution = true
     showAppearanceSwitcher = true
     showScrollToTop = true
 
-  # 自定义样式
-  [params.style]
-    backgroundColor = "transparent"
-    darkBackgroundColor = "transparent"
-
 # 菜单配置
 [[menu.main]]
-  name = "博客"
-  pageRef = "posts"
+  name = "首页"
+  pageRef = "/"
   weight = 10
+
+[[menu.main]]
+  name = "文章"
+  pageRef = "posts"
+  weight = 20
 
 [[menu.main]]
   name = "关于"
   pageRef = "about"
-  weight = 20
+  weight = 30
 
 [markup]
   [markup.highlight]
     noClasses = false
+    lineNos = true
+    style = "monokai"
 
-# 启用自定义 CSS
-[module]
-  [[module.mounts]]
-    source = "assets"
-    target = "assets"
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  
+[security]
+  [security.funcs]
+    getenv = ['^HUGO_']
