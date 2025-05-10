@@ -29,35 +29,19 @@ defaultContentLanguage = "zh-cn"
     showBreadcrumbs = true
     showDraftLabel = true
     showEdit = false
-    editURL = ""
-    editAppendPath = true
     showHeadingAnchors = true
     showPagination = true
-    invertPagination = false
     showReadingTime = true
     showTableOfContents = true
     showTaxonomies = true
     showWordCount = true
     showSummary = true
-    sharingLinks = ["twitter", "github", "email"]
 
   # 作者信息
   [params.author]
     name = "博主"
     headline = "热爱技术，热爱生活"
     bio = "一个对技术充满热情的程序员"
-    image = "img/author.jpg"  # 可以添加你的头像
-
-  # 社交媒体链接
-  [[params.socialLinks]]
-    icon = "github"
-    title = "GitHub"
-    url = "https://github.com/yourusername"
-
-  [[params.socialLinks]]
-    icon = "twitter"
-    title = "Twitter"
-    url = "https://twitter.com/yourusername"
 
   # 页脚配置
   [params.footer]
