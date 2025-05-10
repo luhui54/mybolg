@@ -1,17 +1,6 @@
 {
+    "framework": "hugo",
     "buildCommand": "hugo --gc --minify",
-    "installCommand": "wget -O - https://github.com/gohugoio/hugo/releases/download/v0.123.6/hugo_extended_0.123.6_Linux-64bit.tar.gz | tar -xz",
-    "framework": null,
-    "builds": [
-        {
-            "src": "public/**",
-            "use": "@vercel/static"
-        }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/public/$1"
-        }
-    ]
+    "installCommand": "curl -L https://github.com/gohugoio/hugo/releases/download/v0.123.6/hugo_extended_0.123.6_linux-amd64.tar.gz | tar -xz && mv hugo /usr/local/bin/hugo",
+    "outputDirectory": "public"
 } 
