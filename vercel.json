@@ -1,0 +1,14 @@
+{
+    "buildCommand": "hugo --gc --minify",
+    "installCommand": "hugo-installer",
+    "framework": "hugo",
+    "builds": [
+        {
+            "src": "package.json",
+            "use": "@vercel/static-build",
+            "config": {
+                "zeroConfig": true
+            }
+        }
+    ]
+} 

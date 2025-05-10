@@ -1,0 +1,9 @@
+{
+    "name": "my-hugo-blog",
+    "version": "1.0.0",
+    "description": "My personal blog built with Hugo",
+    "scripts": {
+        "dev": "hugo server -D",
+        "build": "hugo --gc --minify"
+    }
+} 
