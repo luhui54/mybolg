@@ -1,0 +1,87 @@
+baseURL = "https://your-domain.com"
+languageCode = "zh-cn"
+title = "My Blog"
+theme = "blowfish"
+
+# 主题配置
+[params]
+  # 网站描述
+  description = "我的个人博客"
+  
+  # 配置主题外观
+  colorScheme = "blowfish"
+  defaultAppearance = "dark"
+  autoSwitchAppearance = true
+  enableSearch = true
+  
+  # 主页配置
+  [params.homepage]
+    layout = "profile"
+    showRecent = true
+    cardView = true
+
+  # 文章配置
+  [params.article]
+    showDate = true
+    showDateUpdated = true
+    showAuthor = true
+    showBreadcrumbs = true
+    showDraftLabel = true
+    showEdit = false
+    editURL = ""
+    editAppendPath = true
+    showHeadingAnchors = true
+    showPagination = true
+    invertPagination = false
+    showReadingTime = true
+    showTableOfContents = true
+    showTaxonomies = true
+    showWordCount = true
+    showSummary = true
+    sharingLinks = ["linkedin", "twitter", "whatsapp", "facebook", "email"]
+
+  # 作者信息
+  [params.author]
+    name = "Your Name"
+    headline = "A passionate blogger"
+    bio = "这里写一些关于你自己的介绍"
+
+  # 社交媒体链接
+  [[params.author.links]]
+    github = "https://github.com/yourusername"
+  
+  [[params.author.links]]
+    twitter = "https://twitter.com/yourusername"
+
+  # 外观定制
+  [params.footer]
+    showCopyright = true
+    showThemeAttribution = true
+    showAppearanceSwitcher = true
+    showScrollToTop = true
+
+  # 自定义样式
+  [params.style]
+    backgroundColor = "transparent"
+    darkBackgroundColor = "transparent"
+
+# 菜单配置
+[[menu.main]]
+  name = "博客"
+  pageRef = "posts"
+  weight = 10
+
+[[menu.main]]
+  name = "关于"
+  pageRef = "about"
+  weight = 20
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+
+# 启用自定义 CSS
+[module]
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
